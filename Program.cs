@@ -23,6 +23,7 @@ class Program
             //handling all the exceptions that may occur
             try
             {
+                //options for the user
                 WriteLine("########################################################");
                 WriteLine("Please Enter Your product number : 1 to 3 and -1 to Exit");
                 WriteLine("Product 1 = $2.98");
@@ -31,6 +32,7 @@ class Program
                 WriteLine("#########################################################");
                 Productnumber = Convert.ToInt32(Console.ReadLine());
 
+                //program termination
                 if (Productnumber == -1)
                 {
                     break;
@@ -71,16 +73,18 @@ class Program
 
                 }
 
+                //incrementation of the final values of the customer.
                 OverallTotal += TotalPrice;
                 OverallQuantitySold += QuantitySold;
             }
             catch (Exception ex)
             {
+                //user warning for entering a wrong input.
                 WriteLine("Invalid imput: Please enter a valid Key!!!");
                 ex.ToString();
             }
     }
-
+            //displaying the final results for the user.
             WriteLine("Quantity that is sold is :" + OverallQuantitySold);
             WriteLine("Your Overall Total for all products is:" + OverallTotal);
     }

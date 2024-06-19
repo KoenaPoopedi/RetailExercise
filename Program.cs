@@ -21,8 +21,8 @@ class Program
 {
     public static void Main(string[] args)
     {
-       Sales sales = new Sales();
-        sales.CalculatingSales();
+       Sales sales = new Sales(); //declaring an instance of a class
+        sales.CalculatingSales(); //calling a class method
     }
 }
 
